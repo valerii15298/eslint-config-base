@@ -1,3 +1,5 @@
+// @ts-check
+
 import js from "@eslint/js";
 import configPrettier from "eslint-config-prettier";
 import tsEslint from "typescript-eslint";
@@ -53,5 +55,5 @@ export default tsEslint.config(
   {
     ignores: ["dist", "eslint.config.js"],
   },
-  configPrettier,
+  configPrettier
 );

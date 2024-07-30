@@ -14,16 +14,14 @@
   "author": "Valerii Petryniak <valerii15298@gmail.com>",
   "license": "MIT",
   "devDependencies": {
-    "eslint": "^9.8.0",
+    "@types/eslint-config-prettier": "^6.11.3",
+    "@types/eslint__js": "^8.42.3",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-simple-import-sort": "^12.1.1",
-    "typescript-eslint": "^7.18.0"
+    "typescript-eslint": "8.0.0-alpha.59"
   },
   "peerDependencies": {
-    "eslint": "^9.8.0",
-    "eslint-config-prettier": "^9.1.0",
-    "eslint-plugin-simple-import-sort": "^12.1.1",
-    "typescript-eslint": "^7.18.0"
+    "eslint": ">= 9"
   },
   "packageManager": "pnpm@9.4.0"
 }
