@@ -8,16 +8,12 @@ importers:
 
   .:
     dependencies:
+      '@eslint/js':
+        specifier: ^9.8.0
+        version: 9.8.0
       eslint:
         specifier: '>= 9'
         version: 9.8.0
-    devDependencies:
-      '@types/eslint-config-prettier':
-        specifier: ^6.11.3
-        version: 6.11.3
-      '@types/eslint__js':
-        specifier: ^8.42.3
-        version: 8.42.3
       eslint-config-prettier:
         specifier: ^9.1.0
         version: 9.1.0(eslint@9.8.0)
@@ -27,6 +23,13 @@ importers:
       typescript-eslint:
         specifier: 8.0.0-alpha.59
         version: 8.0.0-alpha.59(eslint@9.8.0)(typescript@5.5.4)
+    devDependencies:
+      '@types/eslint-config-prettier':
+        specifier: ^6.11.3
+        version: 6.11.3
+      '@types/eslint__js':
+        specifier: ^8.42.3
+        version: 8.42.3
 
 packages:
 

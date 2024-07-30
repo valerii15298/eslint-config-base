@@ -13,12 +13,15 @@
   ],
   "author": "Valerii Petryniak <valerii15298@gmail.com>",
   "license": "MIT",
-  "devDependencies": {
-    "@types/eslint-config-prettier": "^6.11.3",
-    "@types/eslint__js": "^8.42.3",
+  "dependencies": {
+    "@eslint/js": "^9.8.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-simple-import-sort": "^12.1.1",
     "typescript-eslint": "8.0.0-alpha.59"
+  },
+  "devDependencies": {
+    "@types/eslint-config-prettier": "^6.11.3",
+    "@types/eslint__js": "^8.42.3"
   },
   "peerDependencies": {
     "eslint": ">= 9"
