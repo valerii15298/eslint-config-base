@@ -28,7 +28,7 @@ export default tsEslint.config(
       camelcase: ["error", { properties: "never" }],
       "capitalized-comments": "off",
 
-      // Sort imports https://github.com/lydell/eslint-plugin-simple-import-sort?tab=readme-ov-file#usage
+      // Sort imports https://github.com/lydell/eslint-plugin-simple-import-sort#usage
       "simple-import-sort/exports": "error",
       "simple-import-sort/imports": "error",
       "@typescript-eslint/no-unused-vars": [
