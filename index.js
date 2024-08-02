@@ -15,7 +15,7 @@ export default tsEslint.config(
     },
     rules: {
       "no-useless-assignment": "off",
-      "id-length": ["error", { exceptions: ["_"] }],
+      "id-length": "off",
       "no-undefined": "off",
       "no-void": "off",
       "no-warning-comments": "off",
