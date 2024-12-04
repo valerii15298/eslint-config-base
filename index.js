@@ -14,6 +14,8 @@ export default tsEslint.config(
       "@typescript-eslint": tsEslint.plugin,
     },
     rules: {
+      "max-lines-per-function": "off",
+      "max-statements": "off",
       "no-useless-assignment": "off",
       "id-length": "off",
       "no-undefined": "off",
@@ -33,12 +35,11 @@ export default tsEslint.config(
       // Sort imports https://github.com/lydell/eslint-plugin-simple-import-sort#usage
       "simple-import-sort/exports": "error",
       "simple-import-sort/imports": "error",
-      "@typescript-eslint/no-unused-vars": [
-        "error",
-        { argsIgnorePattern: "^_", varsIgnorePattern: "^_" },
-      ],
-
+      
       // https://typescript-eslint.io/
+      "@typescript-eslint/explicit-member-accessibility": "off",
+      "@typescript-eslint/class-methods-use-this": "off",
+      "@typescript-eslint/no-unused-vars": "off",
       "@typescript-eslint/no-namespace": ["error", { allowDeclarations: true }],
       "@typescript-eslint/explicit-function-return-type": "off",
       "@typescript-eslint/naming-convention": "off",
@@ -51,9 +52,6 @@ export default tsEslint.config(
       "@typescript-eslint/no-empty-object-type": "off",
       "@typescript-eslint/consistent-return": "off",
     },
-  },
-  {
-    ignores: ["dist", "eslint.config.js"],
   },
   configPrettier
 );
