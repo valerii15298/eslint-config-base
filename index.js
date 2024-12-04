@@ -15,6 +15,7 @@ export default tsEslint.config(
     },
     rules: {
       "max-lines-per-function": "off",
+      "new-cap": "off",
       "max-statements": "off",
       "no-useless-assignment": "off",
       "id-length": "off",
@@ -37,6 +38,7 @@ export default tsEslint.config(
       "simple-import-sort/imports": "error",
       
       // https://typescript-eslint.io/
+      "@typescript-eslint/no-unsafe-type-assertion": "off",
       "@typescript-eslint/explicit-member-accessibility": "off",
       "@typescript-eslint/class-methods-use-this": "off",
       "@typescript-eslint/no-unused-vars": "off",

@@ -1,8 +1,9 @@
 {
   "name": "@vpetryniak/eslint-config-base",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "Strictest opinionated ESLint configuration for TypeScript projects",
   "main": "index.js",
+  "types": "index.d.ts",
   "type": "module",
   "scripts": {},
   "keywords": [
