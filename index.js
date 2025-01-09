@@ -30,8 +30,9 @@ export default tsEslint.config(
       "func-style": ["error", "declaration"],
       "sort-keys": "off",
       "no-await-in-loop": "off",
-      camelcase: ["error", { properties: "never" }],
       "capitalized-comments": "off",
+      camelcase: "off",
+      "max-lines": "off",
 
       // Sort imports https://github.com/lydell/eslint-plugin-simple-import-sort#usage
       "simple-import-sort/exports": "error",
@@ -53,6 +54,9 @@ export default tsEslint.config(
       "@typescript-eslint/no-magic-numbers": "off",
       "@typescript-eslint/no-empty-object-type": "off",
       "@typescript-eslint/consistent-return": "off",
+      "@typescript-eslint/promise-function-async": "off",
+      "@typescript-eslint/prefer-nullish-coalescing": "off",
+      "@typescript-eslint/parameter-properties": "off",
     },
   },
   configPrettier
