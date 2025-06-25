@@ -1,6 +1,6 @@
 // @types/eslint-config-base.d.ts
-import type { TSESLint } from '@typescript-eslint/utils';
+import type { ConfigArray } from "typescript-eslint";
 declare module "@vpetryniak/eslint-config-base" {
-  const config: TSESLint.FlatConfig.ConfigArray;
+  const config: ConfigArray;
   export default config;
 }
