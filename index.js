@@ -27,12 +27,17 @@ export default tsEslint.config(
       "no-inline-comments": "off",
       "no-ternary": "off",
       "sort-imports": "off",
-      "func-style": ["error", "declaration"],
       "sort-keys": "off",
       "no-await-in-loop": "off",
       "capitalized-comments": "off",
       camelcase: "off",
       "max-lines": "off",
+      "no-underscore-dangle": "off",
+      "no-unused-expressions": "off", // covered by https://typescript-eslint.io/rules/no-unused-expressions/
+      "no-implicit-coercion": ["error", { allow: ["!!", "+"] }],
+      "func-style": "off",
+      "no-param-reassign": "off",
+      "no-sequences": "off",
 
       // Sort imports https://github.com/lydell/eslint-plugin-simple-import-sort#usage
       "simple-import-sort/exports": "error",
@@ -57,6 +62,11 @@ export default tsEslint.config(
       "@typescript-eslint/promise-function-async": "off",
       "@typescript-eslint/prefer-nullish-coalescing": "off",
       "@typescript-eslint/parameter-properties": "off",
+      "@typescript-eslint/no-redeclare": "off",
+      "@typescript-eslint/no-unused-expressions": [
+        "error",
+        { allowShortCircuit: true },
+      ],
     },
   },
   configPrettier
