@@ -1,6 +1,3 @@
-// @types/eslint-config-base.d.ts
-import type { ConfigArray } from "typescript-eslint";
-declare module "@vpetryniak/eslint-config-base" {
-  const config: ConfigArray;
-  export default config;
-}
+import type { Config } from "eslint/config";
+declare const config: Config[];
+export default config;

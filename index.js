@@ -4,14 +4,14 @@ import js from "@eslint/js";
 import configPrettier from "eslint-config-prettier";
 import tsEslint from "typescript-eslint";
 import simpleImportSort from "eslint-plugin-simple-import-sort";
+import { defineConfig } from "eslint/config";
 
-export default tsEslint.config(
+export default defineConfig(
   js.configs.all,
-  ...tsEslint.configs.all,
+  tsEslint.configs.all,
   {
     plugins: {
       "simple-import-sort": simpleImportSort,
-      "@typescript-eslint": tsEslint.plugin,
     },
     rules: {
       "max-lines-per-function": "off",
@@ -39,10 +39,10 @@ export default tsEslint.config(
       "no-param-reassign": "off",
       "no-sequences": "off",
 
-      // Sort imports https://github.com/lydell/eslint-plugin-simple-import-sort#usage
+      // https://github.com/lydell/eslint-plugin-simple-import-sort#usage
       "simple-import-sort/exports": "error",
       "simple-import-sort/imports": "error",
-      
+
       // https://typescript-eslint.io/
       "@typescript-eslint/no-unsafe-type-assertion": "off",
       "@typescript-eslint/explicit-member-accessibility": "off",
