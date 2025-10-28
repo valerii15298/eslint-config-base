@@ -1,6 +1,6 @@
 {
   "name": "@vpetryniak/eslint-config-base",
-  "version": "0.0.16",
+  "version": "0.0.17",
   "description": "Strictest opinionated ESLint configuration for TypeScript projects",
   "main": "./index.js",
   "module": "./index.js",
