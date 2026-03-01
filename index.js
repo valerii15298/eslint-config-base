@@ -44,6 +44,7 @@ const config = {
     "no-param-reassign": "off",
     "no-sequences": "off",
     "max-classes-per-file": "off",
+    "no-promise-executor-return": ["error", { allowVoid: true }],
 
     // https://github.com/lydell/eslint-plugin-simple-import-sort#usage
     "simple-import-sort/exports": "error",
@@ -73,6 +74,15 @@ const config = {
       "error",
       { allowShortCircuit: true },
     ],
+    "@typescript-eslint/no-confusing-void-expression": [
+      "error",
+      { ignoreArrowShorthand: true },
+    ],
+    "@typescript-eslint/no-use-before-define": ["error", { functions: false }],
+    "@typescript-eslint/no-misused-promises": [
+      "error",
+      { checksVoidReturn: { attributes: false } },
+    ],
   },
 };
 
@@ -99,28 +109,28 @@ function reactEslintConfig(webGlob) {
     { ...pluginImportX.flatConfigs.react, files: [webGlob] },
     { ...eslintReact.configs.all, files: [webGlob] },
     {
-        rules: {
-          "@eslint-react/naming-convention/filename": "off",
-          "@eslint-react/avoid-shorthand-boolean": "off",
-          "@eslint-react/avoid-shorthand-fragment": "off",
-          "@eslint-react/no-complex-conditional-rendering": "off",
-          "@eslint-react/hooks-extra/no-direct-set-state-in-use-effect": "off",
-          "@eslint-react/web-api/no-leaked-timeout": "off",
-          "@eslint-react/naming-convention/use-state": "off",
-          "@eslint-react/no-children-prop": "off",
-          "@eslint-react/no-array-index-key": "off",
-          "@eslint-react/prefer-destructuring-assignment": "off",
-          "@eslint-react/no-unnecessary-use-memo": "off",
-          "@eslint-react/hooks-extra/no-unnecessary-use-memo": "off", // TODO recheck this
-    
-          "react-hooks/set-state-in-effect": "off",
-          "react-hooks/use-memo": "off",
-          "react-hooks/static-components": "off",
-          "react-hooks/refs": "off",
-          "react-hooks/incompatible-library": "off",
-        },
-        files: [webGlob],
+      rules: {
+        "@eslint-react/naming-convention/filename": "off",
+        "@eslint-react/avoid-shorthand-boolean": "off",
+        "@eslint-react/avoid-shorthand-fragment": "off",
+        "@eslint-react/no-complex-conditional-rendering": "off",
+        "@eslint-react/hooks-extra/no-direct-set-state-in-use-effect": "off",
+        "@eslint-react/web-api/no-leaked-timeout": "off",
+        "@eslint-react/naming-convention/use-state": "off",
+        "@eslint-react/no-children-prop": "off",
+        "@eslint-react/no-array-index-key": "off",
+        "@eslint-react/prefer-destructuring-assignment": "off",
+        "@eslint-react/no-unnecessary-use-memo": "off",
+        "@eslint-react/hooks-extra/no-unnecessary-use-memo": "off", // TODO recheck this
+
+        "react-hooks/set-state-in-effect": "off",
+        "react-hooks/use-memo": "off",
+        "react-hooks/static-components": "off",
+        "react-hooks/refs": "off",
+        "react-hooks/incompatible-library": "off",
       },
+      files: [webGlob],
+    },
   );
 }
 
@@ -145,11 +155,11 @@ export function eslintConfig(params) {
           createTypeScriptImportResolver({
             alwaysTryTypes: true,
             project,
-          })
+          }),
         ),
       },
     },
     includeIgnoreFile(params.gitignorePath),
-    params.webGlob ? reactEslintConfig(params.webGlob) : {}
+    params.webGlob ? reactEslintConfig(params.webGlob) : {},
   );
 }
