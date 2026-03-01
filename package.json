@@ -1,6 +1,6 @@
 {
   "name": "@vpetryniak/eslint-config-base",
-  "version": "0.0.17",
+  "version": "0.0.18",
   "description": "Strictest opinionated ESLint configuration for TypeScript projects",
   "repository": {
     "url": "https://github.com/valerii15298/eslint-config-base"
