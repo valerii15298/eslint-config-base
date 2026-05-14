@@ -105,7 +105,6 @@ function reactEslintConfig(webGlob) {
       files: [webGlob],
     },
     { ...reactRefresh.configs.vite, files: [webGlob] },
-    // @ts-expect-error
     { ...pluginImportX.flatConfigs.react, files: [webGlob] },
     { ...eslintReact.configs.all, files: [webGlob] },
     {
@@ -147,7 +146,6 @@ export function eslintConfig(params) {
     {
       languageOptions: { parserOptions: { projectService: true } },
     },
-    // @ts-expect-error
     importX,
     {
       settings: {

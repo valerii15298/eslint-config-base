@@ -16,6 +16,8 @@ expect <<'EOF'
   send "test\r"
   expect "Password:"
   send "test\r"
+  expect "Email"
+  send "test\r"
   expect eof
 EOF
 
